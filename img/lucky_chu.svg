@@ -426,30 +426,47 @@
 	.st5{fill:#FFB000;}
 	.st6{fill:none;}
 	.st7{fill:#F9593A;}
-	.st8{clip-path:url(#SVGID_2_);}
+	.st8{-webkit-clip-path:url(#SVGID_2_);clip-path:url(#SVGID_2_);}
 	.st9{fill:#FF1717;}
 	.st10{fill:#FFE197;}
 	.st11{display:none;opacity:0.1;enable-background:new    ;}
 	.st12{fill:#FFC800;}
 
+  @-webkit-keyframes arm {
+    0%, 100% { -webkit-transform: rotate(-60deg); transform: rotate(-60deg); transform: rotate(-60deg);}
+    50% { -webkit-transform: rotate(15deg); transform: rotate(15deg); transform: rotate(15deg);}
+  }
+
   @keyframes arm {
-    0%, 100% { transform: rotate(-60deg); transform: rotate(-60deg);}
-    50% { transform: rotate(15deg); transform: rotate(15deg);}
+    0%, 100% { -webkit-transform: rotate(-60deg); transform: rotate(-60deg); transform: rotate(-60deg);}
+    50% { -webkit-transform: rotate(15deg); transform: rotate(15deg); transform: rotate(15deg);}
   }
 
   #arm {
-		transform: translate(20px,10px);
-	  transform-origin: 54% 57%;
-	  animation: arm 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+		-webkit-transform: translate(20px,10px);
+		    -ms-transform: translate(20px,10px);
+		        transform: translate(20px,10px);
+	  -webkit-transform-origin: 54% 57%;
+	      -ms-transform-origin: 54% 57%;
+	          transform-origin: 54% 57%;
+	  -webkit-animation: arm 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+	          animation: arm 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
   }
 
+	@-webkit-keyframes text {
+		100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+	}
+
 	@keyframes text {
-		100% { transform: rotate(360deg);}
+		100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
 	}
 
 	#text {
-		transform-origin: 50% 50%;
-		animation: text 88s linear infinite;
+		-webkit-transform-origin: 50% 50%;
+		    -ms-transform-origin: 50% 50%;
+		        transform-origin: 50% 50%;
+		-webkit-animation: text 88s linear infinite;
+		        animation: text 88s linear infinite;
 	}
 </style>
 

@@ -9,30 +9,37 @@
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Assistant:600,700,800" rel="stylesheet"></head>
+  <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet">
+</head>
 
 <body>
-<div class="main">
-  <div class="illustration"></div>
+  <div class="main">
+    <div class="illustration"></div>
+    <div class="buy">
+      <div class="buttons">
+        <div class="pin">
+          <div>Pre-order the Pin
+            <br>$10</div>
+            <div id='product-component-ecb28e09c5a'></div>
+        </div>
 
-  <div class="buttons">
-    <div class="pin">
-      <div>Get the Pin
-        <br>$12</div>
-      <div id='product-component-4d6718492fc'></div>
+        <div class="divider"></div>
+
+        <div class="sticker">
+          <div>Get the Sticker
+          <br>$5</div>
+          <div id='product-component-82aff9dbbb5'></div>
+        </div>
+      </div>
+      <p class="fineprint">Orders that include Lucky Chu pins will be charged immediately and shipped + delivered for February 2019.<br>
+        If you have any questions about your order, please contact Leanne at <a href="mailto:leanne@macaspac.ca?subject=Luckychu%20Help">leanne@macaspac.ca</a></p>
     </div>
 
-    <div class="divider"></div>
+    <div class="credit">A <a href="https://instagram.com/mxpc.ai">MXPC</a> x <a href="https://instagram.com/misquared">Mimi Vuong</a> Joint</div>
 
-    <div class="sticker">
-      <div>Get the Sticker
-      <br>$5</div>
-      <div id='product-component-3b0359541ee'></div>
-    </div>
   </div>
-  <div class="credit">A <a href="https://instagram.com/mxpc.ai">MXPC</a> x <a href="http://mimivuong.com">Mimi Vuong</a> Joint</div>
 
-</div>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script>
@@ -88,7 +95,7 @@
         ShopifyBuy.UI.onReady(client).then(function (ui) {
           ui.createComponent('product', {
             id: [1549929086998],
-            node: document.getElementById('product-component-4d6718492fc'),
+            node: document.getElementById('product-component-ecb28e09c5a'),
             moneyFormat: '%24%7B%7Bamount%7D%7D',
             options: {
   "product": {
@@ -130,6 +137,9 @@
   "cart": {
     "contents": {
       "button": true
+    },
+    "text": {
+      "notice": "Clicking Checkout will redirect you to Shopify's checkout. Shipping rates will be shown at checkout."
     },
     "styles": {
       "cart": {
@@ -313,7 +323,7 @@
         ShopifyBuy.UI.onReady(client).then(function (ui) {
           ui.createComponent('product', {
             id: [1549929054230],
-            node: document.getElementById('product-component-3b0359541ee'),
+            node: document.getElementById('product-component-82aff9dbbb5'),
             moneyFormat: '%24%7B%7Bamount%7D%7D',
             options: {
   "product": {
@@ -355,6 +365,9 @@
   "cart": {
     "contents": {
       "button": true
+    },
+    "text": {
+      "notice": "Clicking Checkout will redirect you to Shopify's checkout. Shipping rates will be shown at checkout."
     },
     "styles": {
       "cart": {
