@@ -22,7 +22,9 @@ body {
     font-size: 1.6em;
     letter-spacing: 0.1em;
     line-height: 1.9;
-    font-family: 'Slabo 13px', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-style: italic;
     color: #F8E71C;
     background-color: #D0021B;
     margin: auto;
@@ -30,60 +32,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
-
-
-/* Grid
--------------------------------------------------- */
-
-.flex-grid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-}
-
-.flex-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.flex-center-h {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-}
-
-.flex-center-v {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
-
-.flex-center {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-}
-
-.flex-right {
-  align-items: flex-end;
-}
-
-.flex-space-around {
-  justify-content: space-around;
-}
-
-.flex-space-between {
-  justify-content: space-between;
-}
-
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -99,13 +47,11 @@ h1 {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
   color: #F8E71C;
-  -webkit-transition:all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 a:hover {
   opacity: 0.6;
-  -webkit-transition:all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -113,11 +59,13 @@ a:hover {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .main {
-  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   opacity: 0;
-  -webkit-animation: fadein 3s 0.3s 1 forwards; /* Safari, Chrome and Opera > 12.1 */ /* Firefox < 16 */ /* Internet Explorer */ /* Opera < 12.1 */
   animation: fadein 3s 0.3s 1 forwards;
 }
 
@@ -132,6 +80,8 @@ a:hover {
 }
 
 .buttons {
+  display: flex;
+  align-items: center;
   background-color: #D0021B;
   border: 1px solid #F8E71C;
   padding: 20px;
@@ -157,68 +107,16 @@ a:hover {
 -------------------------------------------------- */
 
 @media only screen and (max-width: 750px) {
-
-  h1, h2 { line-height: 5.3rem; font-size: 4rem;}
-
-  .intro, .cta, .store > .cta {
-    margin: 20px;
+  .main {
+    height: auto;
+  }
+  .buttons {
+    flex-direction: column;
+    margin: 80px 0 0 0;
   }
 
-  .home, .intro {
-    height: 98vh;
-  }
-
-  .set {
-    top: 98vh;
-  }
-
-
-  .about {
-    padding: 40px 20px;
-  }
-
-  .break {
-    display:none;
-  }
-
-  .illustrations {
-    padding-bottom: 20px;
-  }
-
-  .store {
-    margin-top: 20px;
-    padding: 20px 0;
-  }
-
-  .ill-item, .store-item {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-            padding: 0;
-            margin: 0;
-  }
-
-  .store-item {
-    padding: 32px;
-  }
-
-  a.button {
-    width: 100%;
-    text-align: center;
-  }
-
-  .social {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 5px;
-  }
-
-  .social > li {
-    display: inline-block;
-    list-style: none;
-    margin: 20px;
-    font-size: 1.5em;
+  .divider {
+    width: 100px;
+    height: 1px;
   }
 }
